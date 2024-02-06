@@ -1,0 +1,149 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+#gameContainer {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #2196F3;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#questionContainer {
+    display: none;
+}
+
+#question {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+}
+
+#inputField {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+#submitBtn,
+#continueBtn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#submitBtn:hover,
+#continueBtn:hover {
+    background-color: #45a049;
+}
+
+#result {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.correct {
+    color: #4CAF50;
+}
+
+.incorrect {
+    color: #FF5722;
+}
+
+#scoreContainer {
+    display: none;
+    margin-top: 20px;
+}
+
+#successPercentage,
+#errorCount {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+#restartBtn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#restartBtn:hover {
+    background-color: #45a049;
+}
+
+#linkContainer {
+    margin-top: 20px;
+}
+
+#revisionLink {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#revisionLink:hover {
+    background-color: #1565C0;
+}
+
+.return-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.return-link:hover {
+    background-color: #E64A19;
+}

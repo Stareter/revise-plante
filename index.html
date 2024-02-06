@@ -1,0 +1,39 @@
+<!-- La première page (index.html) -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu des plantes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <h1>Jeu des plantes</h1>
+        <button id="startBtn" onclick="startGame()">Commencer la partie</button>
+
+        <div id="questionContainer" style="display: none;">
+            <div id="question"></div>
+            <label for="inputField">Nom commun :</label>
+            <input type="text" id="inputField" placeholder="Entrez le nom commun">
+            <button id="submitBtn" onclick="checkAnswer()">Soumettre</button>
+            <button id="continueBtn" style="display: none;" onclick="continueGame()">Continuer</button>
+            <div id="result"></div>
+        </div>
+
+        <div id="scoreContainer" style="display: none;">
+            <h2>Récapitulatif de la partie</h2>
+            <p>Pourcentage de réussite : <span id="successPercentage">0%</span></p>
+            <p>Nombre de fautes sur 26 : <span id="errorCount">0</span></p>
+            <button id="restartBtn" onclick="restartGame()">Recommencer</button>
+        </div>
+
+        <div id="linkContainer">
+            <a id="revisionLink" href="revision.html" target="_blank">Réviser les plantes</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
