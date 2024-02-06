@@ -11,7 +11,7 @@ var plantes = [
     { scientifique: "Juglans régia", commun: "Noyer" },
     { scientifique: "Prunus avium", commun: "Merisier" },
     { scientifique: "Acer campestre", commun: "Erable champêtre" },
-    { scientifique: "Acer platinoïdes", commun: "Erable plane" },
+    { scientifique: "Acer platanoïdes", commun: "Erable plane" },
     { scientifique: "Acer pseudoplatanus", commun: "Erable sycomore" },
     { scientifique: "Mespilus germanica", commun: "Néflier" },
     { scientifique: "Cornus sanguinea", commun: "Cornouiller sanguin" },
