@@ -3,7 +3,7 @@ var plantes = [
     { scientifique: "Carpinus betulus", commun: "Charme" },
     { scientifique: "Castanea sativa", commun: "Châtaignier" },
     { scientifique: "Sorbus domestica", commun: "Sorbier" },
-    { scientifique: "Ulumus lutèce", commun: "Orme lutèce" },
+    { scientifique: "Ulmus lutèce", commun: "Orme lutèce" },
     { scientifique: "Pyrus pyraster", commun: "Poirier sauvage" },
     { scientifique: "Malus sylvestris", commun: "Pommier sauvage" },
     { scientifique: "Tilia cordata", commun: "Tilleul à petites feuilles" },
