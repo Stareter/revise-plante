@@ -7,7 +7,7 @@ var plantes = [
     { scientifique: "Pyrus pyraster", commun: "Poirier sauvage" },
     { scientifique: "Malus sylvestris", commun: "Pommier sauvage" },
     { scientifique: "Tilia cordata", commun: "Tilleul à petites feuilles" },
-    { scientifique: "Quercus robur", commun: "Chêne de pédonculé" },
+    { scientifique: "Quercus robur", commun: "Chêne pédonculé" },
     { scientifique: "Juglans régia", commun: "Noyer" },
     { scientifique: "Prunus avium", commun: "Merisier" },
     { scientifique: "Acer campestre", commun: "Erable champêtre" },
