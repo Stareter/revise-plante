@@ -1,5 +1,3 @@
-<!-- La première page (index.html) -->
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,8 +9,17 @@
 <body>
     <div id="gameContainer">
         <h1>Jeu des plantes</h1>
-        <button id="startBtn" onclick="startGame()">Commencer la partie</button>
+        
+        <!-- Ajout de l'ID "instructionText" pour pouvoir masquer cette phrase -->
+        <p id="instructionText">Choisissez la liste de plantes à utiliser :</p>
 
+        <!-- Boutons pour choisir entre les plantes des différentes dates -->
+        <div id="buttonContainer">
+            <button id="startBtnJour1" onclick="choisirListeJour(1)">Liste du 10/09/24</button>
+            <button id="startBtnJour2" onclick="choisirListeJour(2)">Liste du 12/09/24</button>
+        </div>
+
+        <!-- Contenu du jeu (questions/réponses) -->
         <div id="questionContainer" style="display: none;">
             <div id="question"></div>
             <label for="inputField">Nom commun :</label>
@@ -20,19 +27,24 @@
             <button id="submitBtn" onclick="checkAnswer()">Soumettre</button>
             <button id="continueBtn" style="display: none;" onclick="continueGame()">Continuer</button>
             <div id="result"></div>
+            <!-- Nouveau bouton pour revenir au menu -->
+            <button id="backToMenuBtn" onclick="backToMenu()">Retour au menu</button>
         </div>
 
+        <!-- Récapitulatif des résultats -->
         <div id="scoreContainer" style="display: none;">
             <h2>Récapitulatif de la partie</h2>
             <p>Pourcentage de réussite : <span id="successPercentage">0%</span></p>
-            <p>Nombre de fautes sur 26 : <span id="errorCount">0</span></p>
+            <p>Nombre de fautes sur <span id="totalQuestions">0</span> : <span id="errorCount">0</span></p>
             <button id="restartBtn" onclick="restartGame()">Recommencer</button>
+            <button id="backToMenuBtnEnd" onclick="backToMenu()">Retour au menu</button> <!-- Nouveau bouton au récapitulatif -->
         </div>
 
+        <!-- Lien vers la page de révision -->
         <div id="linkContainer">
             <a id="revisionLink" href="revision.html" target="_blank">Réviser les plantes</a>
-          <p><span style="text-decoration: underline;"><strong><span style="color: #00ff00; text-decoration: underline;">Site created by Astherti</span></strong></span></p>
         </div>
+        <p><span style="text-decoration: underline;"><strong><span style="color: #00ff00; text-decoration: underline;">Site created by Astherti</span></strong></span></p>
     </div>
 
     <script src="script.js"></script>

@@ -1,5 +1,3 @@
-<!-- La deuxième page (revision.html) -->
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,39 +10,61 @@
     <div id="revisionContainer">
         <h1>Révision des plantes</h1>
 
-        <!-- Afficher les plantes pour révision -->
-        <ul id="revisionList">
-            <li>Sorbus torminalis - Alisier torminal</li>
-            <li>Carpinus betulus - Charme</li>
-            <li>Castanea sativa - Châtaignier</li>
-            <li>Sorbus domestica - Sorbier</li>
-            <li>Ulmus lutèce - Orme lutèce</li>
-            <li>Pyrus pyraster - Poirier sauvage</li>
-            <li>Malus sylvestris - Pommier sauvage</li>
-            <li>Tilia cordata - Tilleul à petites feuilles</li>
-            <li>Quercus robur - Chêne pédonculé</li>
-            <li>Juglans régia - Noyer</li>
-            <li>Prunus avium - Merisier</li>
-            <li>Acer campestre - Erable champêtre</li>
-            <li>Acer platanoïdes - Erable plane</li>
-            <li>Acer pseudoplatanus - Erable sycomore</li>
-            <li>Mespilus germanica - Néflier</li>
-            <li>Cornus sanguinea - Cornouiller sanguin</li>
-            <li>Euonymus europaeus - Fusain d'Europe</li>
-            <li>Syringa vulgaris - Lilas commun</li>
-            <li>Rosa canina - Rosier des chiens</li>
-            <li>Corylus avellana - Noisetier</li>
-            <li>Prunus spinosa - Prunellier</li>
-            <li>Sambucus nigra - Sureau noir</li>
-            <li>Ligustrum vulgare - Troène commun</li>
-            <li>Viburnum opulus - Viorne obier</li>
-            <li>Salix atrocinera - Saule roux</li>
-            <li>Crataegus monogyna - Aubépine monogyne</li>
-        </ul>
+        <!-- Sélecteur pour choisir la liste à réviser -->
+        <label for="categorySelectRevision">Choisissez la liste à réviser :</label>
+        <select id="categorySelectRevision" onchange="filterPlantsForRevision()">
+            <option value="jour1">Liste du 10/09/24</option>
+            <option value="jour2">Liste du 12/09/24</option>
+        </select>
+
+        <!-- Liste des plantes révisées -->
+        <ul id="revisionList"></ul>
 
         <a href="index.html" class="return-link">Retour au jeu</a> <!-- Lien pour retourner à la première page -->
     </div>
-<p><span style="text-decoration: underline;"><strong><span style="color: #00ff00; text-decoration: underline;">Site created by Astherti</span></strong></span></p>
-    <script src="revision.js"></script> <!-- Éventuel fichier JavaScript pour la page de révision -->
+
+    <p><span style="text-decoration: underline;"><strong><span style="color: #00ff00; text-decoration: underline;">Site created by Astherti</span></strong></span></p>
+
+    <script>
+        // Liste des plantes pour le premier jour (10/09/24)
+        var plantesJour1 = [
+            { scientifique: "Acer davidii", commun: "Erable du Père David" },
+            { scientifique: "Albizia julibrissin", commun: "Arbre à soie" },
+            { scientifique: "Betula pubescens", commun: "Bouleau pubescent" },
+            { scientifique: "Cercis siliquastrum", commun: "Arbre de Judée" },
+            { scientifique: "Cupressus sempervirens", commun: "Cyprès totem" },
+            { scientifique: "Eriobotrya japonica", commun: "Néflier du Japon" },
+            { scientifique: "Lagerstroemia indica", commun: "Lilas des Indes" },
+            { scientifique: "Prunus lusitanica", commun: "Laurier du Portugal" },
+            { scientifique: "Robinia pseudoacacia 'Frisia'", commun: "Robinier faux acacia doré" },
+            { scientifique: "Robinia pseudoacacia 'Lace Lady'", commun: "Robinier Twisty Baby" }
+        ];
+
+        // Liste des plantes pour le deuxième jour (12/09/24)
+        var plantesJour2 = [
+            { scientifique: "Acer palmatum", commun: "Erable japonais" },
+            { scientifique: "Acer palmatum 'Garnet'", commun: "Erable japonais Garnet" },
+            { scientifique: "Acer pseudoplatanus 'Astropurpureum'", commun: "Erable sycomore Atropurpureum" },
+            { scientifique: "Arbutus unedo", commun: "Arbousier" },
+            { scientifique: "Carpinus betulus 'Fastigiata'", commun: "Charme fastigié" },
+            { scientifique: "Cedrus atlantica 'Glauca'", commun: "Cèdre bleu de l'Atlas" },
+            { scientifique: "Cornus controversa 'Variegata'", commun: "Cornouiller des pagodes variegata" },
+            { scientifique: "Cupressus arizonica", commun: "Cyprès de l'Arizona" },
+            { scientifique: "Eleagnus angustifolia", commun: "Olivier de Bohême" },
+            { scientifique: "Salix babylonica 'Tortuosa'", commun: "Saule de Babylone tortueux" },
+            { scientifique: "Taxus baccata 'Fastigiata'", commun: "Ifs communs fastigiata" },
+            { scientifique: "Thuja occidentalis", commun: "Thuya d'Occident" }
+        ];
+
+        function filterPlantsForRevision() {
+            var category = document.getElementById("categorySelectRevision").value;
+            var plantes = (category === 'jour1') ? plantesJour1 : plantesJour2;
+            var revisionList = document.getElementById("revisionList");
+            revisionList.innerHTML = plantes.map(plant => `<li>${plant.scientifique} - ${plant.commun}</li>`).join('');
+        }
+
+        // Afficher les plantes de la liste du jour 1 par défaut
+        filterPlantsForRevision();
+    </script>
 </body>
 </html>
